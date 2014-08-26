@@ -20,11 +20,11 @@
 			<div class="banner-communicate-layout banner-communicate-layout-2">
 				<div class="banner-communicate-column banner-communicate-column-1">
 					<div class="banner-communicate-column-content">
-						
+
 						#if($intro.data != "")
     						<p class="intro">
     							${intro.data}
-    						<p>							
+    						<p>
 						#end
 
 						#if($content.data != "")
@@ -41,14 +41,14 @@
     							<span>${button.data}</span>
     						</a>
 						#end
-						
+
 					</div>
 				</div>
 			</div>
 		</div>
-		
-		
-		<div class="banner-communicate-view banner-communicate-view-movie aui-helper-hidden">
+
+
+		<div class="banner-communicate-view banner-communicate-view-movie hide">
 			<div class="back-link-wrap">
 				<a class="action-link" href="#">
 					<span>&laquo; Tillbaka</span>
@@ -58,11 +58,11 @@
 			<div class="movie-ctn">
 			</div>
 
-			
-			
+
+
 		</div>
-		
+
 	</div>
-	
-	
+
+
 </div>
