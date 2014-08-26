@@ -1,0 +1,102 @@
+## Define some services
+#set ($groupLocalService = $serviceLocator.findService("com.liferay.portal.service.GroupLocalService"))
+#set ($layoutLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutLocalService"))
+#set ($layoutSetLocalService = $serviceLocator.findService("com.liferay.portal.service.LayoutSetLocalService"))
+
+##Define variables
+#set ($null = $some-never-used-variable)
+#set ($themeDisplay = $request.get('theme-display'))
+
+#set ($isSignedIn = false)
+#if($request.get("remote-user") != "")
+	#set ($isSignedIn = true)
+#end
+
+#set ($scopePlid = $getterUtil.getLong($themeDisplay.get('plid')))
+
+#set ($scopeLayout = $layoutLocalService.getLayout($scopePlid))
+
+#set ($groupIdLong = $getterUtil.getLong($groupId))
+#set ($scopeGroup = $groupLocalService.getGroup($groupIdLong))
+#set ($urlPrefix = "")
+
+#set($scopeLayoutSet = $layoutSetLocalService.getLayoutSet($groupIdLong, $scopeLayout.isPrivateLayout()))
+
+#set($scopeLayoutSetVirtualHost = $scopeLayoutSet.getVirtualHostname())
+
+#set($hasVirtualHost = false)
+
+#if($scopeLayoutSetVirtualHost != $null && $scopeLayoutSetVirtualHost != "")
+	#set($hasVirtualHost = true)
+#end
+
+#if(!$hasVirtualHost)
+
+	#if($scopeLayout.isPrivateLayout())
+		#set($urlPrefix = "/group")
+	#else
+		#set($urlPrefix = "/web")
+	#end
+	
+	#set($urlPrefix = $urlPrefix + $scopeGroup.getFriendlyURL())
+
+#end
+
+#set($mainCssClass = "puff-box")
+#if($skin.data == "alt-2")
+	#set($mainCssClass = $mainCssClass + " puff-box-alt2")
+#elseif($skin.data == "alt-3")
+	#set($mainCssClass = $mainCssClass + " puff-box-alt3")
+#end
+
+
+<div class="${mainCssClass}">
+	<div class="puff-box-inner">
+		
+    	#if($heading.data != "")
+    		<h2>${heading.data}</h2>
+    	#end
+    	
+    	#if($content.data != "")
+    		<div class="puff-box-content">
+    			${content.data}
+    		</div>
+		#end
+		
+		#if($link.data != "")
+			<div class="puff-box-link-wrap">
+				
+        		#set($linkURL = "")
+    			
+        		## External Link
+        		#if($link.externalLink.data != "")
+        			#set($linkURL = ${link.externalLink.data})
+    			## Internal Link	
+        		#else
+                	#set($linkLayoutId = $getterUtil.getLong($link.internalLink.data))
+                	#set ($linkLayout = $layoutLocalService.getLayout($groupIdLong, $scopeLayout.isPrivateLayout(), $linkLayoutId))
+                	#set($linkURL = $urlPrefix + $linkLayout.getFriendlyURL())
+    				##set($linkURL = "#internal")
+        		#end
+        		
+        		#set($targetForLink = "")
+        		#if($link.linkTarget.data == "_BLANK")
+        			#set($targetForLink = "_BLANK")	
+				#end
+				
+				#set($linkCssClass = "")
+				#set($promptMsg = "")
+				#if($link.signinPrompt.data == "true" && !$isSignedIn)
+					#set($linkCssClass = "innovationsslussen-signin-prompt")
+					#set($promptMsg = $link.signinPrompt.promptMsg.data)
+				#end
+				
+                <a class="${linkCssClass}" href="${linkURL}" target="${targetForLink}" data-promptMsg="${promptMsg}">
+        			${link.data}
+        		</a>
+			
+			</div>
+		#end
+
+	</div>
+</div>

@@ -1,0 +1,97 @@
+<root>
+    
+	<dynamic-element name='heading' type='text' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in puffboxens rubrik.]]></entry>
+			<entry name="label"><![CDATA[Artikelrubrik]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+    
+	<dynamic-element name='content' type='text_area' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in br&ouml;dtext f&ouml;r puffboxen.]]></entry>
+			<entry name="label"><![CDATA[Br&ouml;dtext]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>	
+	</dynamic-element>
+	
+	<dynamic-element name="link" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in en titel f&ouml;r l&auml;s-mer-l&auml;nken.]]></entry>
+			<entry name="label"><![CDATA[L&auml;nktext]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+		<dynamic-element name="internalLink" type="link_to_layout" index-type="" repeatable="false">
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[V&auml;lj en sida till vilken l&auml;s-mer-l&auml;nken l&auml;nkar (eller skriv in en extern l&auml;nk nedan).]]></entry>
+				<entry name="label"><![CDATA[Intern L&auml;nk]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="externalLink" type="text" repeatable="false">
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in en URL till vilken l&auml;s-mer-l&auml;nken l&auml;nkar (eller v&auml;lj en intern l&auml;nk nedan).]]></entry>
+				<entry name="label"><![CDATA[Extern L&auml;nk]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="linkTarget" type="list" index-type="" repeatable="false">
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[V&auml;lj om l&auml;lnken skall &ouml;ppnas i samma f&ouml;nster/tabb eller i ett nytt f&ouml;nster/tabb (_BLANK)]]></entry>
+				<entry name="label"><![CDATA[Link Target]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+			<dynamic-element name="Normal" type="none" index-type="" repeatable="false"></dynamic-element>
+			<dynamic-element name="New Window (_BLANK)" type="_BLANK" index-type="" repeatable="false"></dynamic-element>
+		</dynamic-element>
+		
+		
+		    <dynamic-element name='signinPrompt' type='boolean' index-type='' repeatable='false'>
+				<meta-data>
+					<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+					<entry name="required"><![CDATA[false]]></entry>
+					<entry name="instructions"><![CDATA[Klicka i checkboxen om anv&auml;ndaren skall promptas om inloggning n&auml;r denne klickar p&aring; l&auml;nken (ingen r&auml;ttighetshantering - sj&auml;lva r&auml;ttighetshanteringen m&arin;ste sedan ligga p&auml; sidan l&auml;nken g&aring;r till)..]]></entry>
+					<entry name="label"><![CDATA[Prompta inloggning]]></entry>
+					<entry name="predefinedValue"><![CDATA[false]]></entry>
+				</meta-data>
+				
+				<dynamic-element name="promptMsg" type="text" repeatable="false">
+					<meta-data>
+						<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+						<entry name="required"><![CDATA[false]]></entry>
+						<entry name="instructions"><![CDATA[Skriv in den text som visas i inloggningsprompten]]></entry>
+						<entry name="label"><![CDATA[Prompt-meddelande]]></entry>
+						<entry name="predefinedValue"><![CDATA[]]></entry>
+					</meta-data>
+				</dynamic-element>
+								
+		    </dynamic-element>
+		
+	</dynamic-element>
+	
+	<dynamic-element name="skin" type="list" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[V&auml;lj utseende f&ouml;r boxen]]></entry>
+			<entry name="label"><![CDATA[Boxens utseende]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+		<dynamic-element name="Standard (blue)" type="standard" index-type="" repeatable="false"></dynamic-element>
+		<dynamic-element name="Alt 2 (green)" type="alt-2" index-type="" repeatable="false"></dynamic-element>
+		<dynamic-element name="Alt 3 (yellow)" type="alt-3" index-type="" repeatable="false"></dynamic-element>
+	</dynamic-element>
+</root>

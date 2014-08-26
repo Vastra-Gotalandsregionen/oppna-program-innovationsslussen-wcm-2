@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+
+<root>
+    
+	<dynamic-element name="heading" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in en rubrik]]></entry>
+			<entry name="label"><![CDATA[Rubrik]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+    
+	<dynamic-element name="intro" type="text_box" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in en introtext]]></entry>
+			<entry name="label"><![CDATA[Intro]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	
+	<dynamic-element name="content" type="text_area" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in br&ouml;dtext]]></entry>
+			<entry name="label"><![CDATA[Br&ouml;dtext]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	</dynamic-element>
+	
+
+	<dynamic-element name="buttons" type="text" index-type="" repeatable="true">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in namnet p&auml; knappen]]></entry>
+			<entry name="label"><![CDATA[Namn p&aring; knapp]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+		<dynamic-element name="videoId" type="text" index-type="" repeatable="false">
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in videons id hos YouTube.]]></entry>
+				<entry name="label"><![CDATA[Video-id hos YouTube]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+
+	</dynamic-element>
+	
+</root>

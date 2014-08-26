@@ -1,0 +1,15 @@
+<div class="main-content-article">
+	#if($heading.data != "")
+		<h1>${heading.data}</h1>
+	#end
+	
+	#if($intro.data != "")
+		<p class="intro">${intro.data}</p>
+	#end
+
+	#if($content.data != "")
+		<div class="main-content-article-content">
+			${content.data}
+		</div>
+	#end
+</div>

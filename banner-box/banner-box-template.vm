@@ -1,0 +1,47 @@
+<div class="banner-box">
+	<div class="banner-box-content">
+		#set($isFirstImage = true)
+	
+		## Loop all images
+		#foreach($img in $image.getSiblings())
+
+			## Define some properties needed for each image
+			#set($imageSrc = $img.getData())
+			#set($imageLink = "")
+			#set($imageAlt = "")
+			#set($linkClass = "banner-box-link")
+			
+			#if(!$isFirstImage)
+				#set($linkClass = "banner-box-link aui-helper-hidden")
+			#end
+			
+			## Loop each child field to image
+			#foreach($img_child in $img.getChildren())
+				#if ($img_child.getName()== "link" && $img_child.getData()!= "")
+					#set($imageLink = $img_child.getData())
+				#elseif ($img_child.getName()== "alt" && $img_child.getData()!= "")
+					#set($imageAlt = $img_child.getData())
+				#end
+			#end
+			<a href="${imageLink}" class="${linkClass}">
+				<img src="${imageSrc}" alt="${imageAlt}" />
+			</a>
+			#set($isFirstImage = false)
+		#end
+	</div>
+	
+	<div class="banner-box-menu-wrap">
+		<ul class="banner-box-menu aui-helper-hidden clearfix">
+			##<li class="aui-carousel-menu-play">Play/Pause</li>
+			##<li class="aui-carousel-menu-prev">Previous</li>
+			#set($index_ticker = 1)
+			#foreach($img in $image.siblings)
+				<li class="aui-carousel-menu-index #if($index_ticker == 1)aui-carousel-menu-active#end">$index_ticker</li>
+				#set($index_ticker = $index_ticker + 1)
+			#end
+			##<li class="aui-carousel-menu-next">Next</li>
+		</ul>
+	</div>
+	
+	
+</div>

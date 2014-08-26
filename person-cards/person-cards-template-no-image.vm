@@ -1,0 +1,50 @@
+
+#if($persons.siblings.size() > 0)
+
+	<ul class="persons-list">
+	
+		#foreach($person in $persons.siblings)
+		
+			<li>
+				<div class="person person-no-image">
+					<div class="person-inner clearfix">
+						<div class="person-info-ctn">
+							<div class="person-info">
+								#if($person.data)
+									<h3>
+										${person.data}
+										#if($person.nameExtra.data != "")
+											<span>(${person.nameExtra.data})</span>
+										#end
+									</h3>
+								#end
+								
+								#if($person.workTitle.data != "")
+									<p>${person.workTitle.data}</p>
+								#end
+								#if($person.workOrganization.data != "")
+									<p>${person.workOrganization.data}</p>
+								#end
+								#if($person.email.data != "")
+									<p>
+										<a href="mailto:${person.email.data}">${person.email.data}</a>
+									</p>
+								#end
+								#if($person.phone.data != "")
+									<p>Tel: ${person.phone.data}</p>
+								#end
+								#if($person.mobile.data != "")
+									<p>Mob: ${person.mobile.data}</p>
+								#end
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		
+		#end
+	
+	</ul>
+
+#end
+
