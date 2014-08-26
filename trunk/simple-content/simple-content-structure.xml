@@ -1,0 +1,13 @@
+<root>
+
+	<dynamic-element name='content' type='text_area' index-type='' repeatable='false'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in br&ouml;dtext f&ouml;r artikeln.]]></entry>
+			<entry name="label"><![CDATA[Br&ouml;dtext]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>	
+	</dynamic-element>
+    
+</root>

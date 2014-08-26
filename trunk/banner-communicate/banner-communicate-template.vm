@@ -1,0 +1,68 @@
+<div class="banner-communicate">
+
+	<div class="banner-communicate-view-wrap">
+		<div class="banner-communicate-view banner-communicate-view-start">
+			<div class="banner-communicate-layout banner-communicate-layout-1">
+				<div class="banner-communicate-column banner-communicate-column-1">
+					<div class="banner-communicate-column-content">
+						#if($heading.data != "")
+							<h1><span>${heading.data}</span></h1>
+						#end
+					</div>
+				</div>
+				<div class="banner-communicate-column banner-communicate-column-2">
+					<div class="banner-communicate-column-content">
+						&nbsp;
+					</div>
+				</div>
+			</div>
+
+			<div class="banner-communicate-layout banner-communicate-layout-2">
+				<div class="banner-communicate-column banner-communicate-column-1">
+					<div class="banner-communicate-column-content">
+						
+						#if($intro.data != "")
+    						<p class="intro">
+    							${intro.data}
+    						<p>							
+						#end
+
+						#if($content.data != "")
+    						<div>
+    							${content.data}
+    						</div>
+						#end
+					</div>
+				</div>
+				<div class="banner-communicate-column banner-communicate-column-2">
+					<div class="banner-communicate-column-content">
+						#foreach($button in $buttons.siblings)
+    						<a class="action-link action-link-button" href="${button.embedUrl.data}" data-videoId="${button.videoId.data}">
+    							<span>${button.data}</span>
+    						</a>
+						#end
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="banner-communicate-view banner-communicate-view-movie aui-helper-hidden">
+			<div class="back-link-wrap">
+				<a class="action-link" href="#">
+					<span>&laquo; Tillbaka</span>
+				</a>
+			</div>
+
+			<div class="movie-ctn">
+			</div>
+
+			
+			
+		</div>
+		
+	</div>
+	
+	
+</div>

@@ -1,0 +1,84 @@
+<root>
+
+	<dynamic-element name='persons' type='text' index-type='' repeatable='true'>
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[true]]></entry>
+			<entry name="instructions"><![CDATA[Skriv in personens namn.]]></entry>
+			<entry name="label"><![CDATA[Namn]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+	
+		<dynamic-element name='nameExtra' type='text' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in extra info om personen. T.ex. ordf&ouml;rande (Innvationsr&aring;det)]]></entry>
+				<entry name="label"><![CDATA[Namn - extra]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>	
+		</dynamic-element>
+	
+		<dynamic-element name='image' type='image_gallery' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[V&auml;lj bild f&ouml;r personen.]]></entry>
+				<entry name="label"><![CDATA[Bild]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>	
+		</dynamic-element>
+		
+		<dynamic-element name='workTitle' type='text' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in personens titel / yrkesroll (t.ex. Undersk&ouml;terska).]]></entry>
+				<entry name="label"><![CDATA[Titel / Yrkesroll]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		
+		<dynamic-element name='workOrganization' type='text' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in vilken enhet / verksamhet personen arbetar p&aring; (t.ex. M&auml;va 1, Uddevalla sjukhus).]]></entry>
+				<entry name="label"><![CDATA[Enhet / Verksamhet]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		
+		<dynamic-element name='email' type='text' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in personens e-post.]]></entry>
+				<entry name="label"><![CDATA[E-post]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+
+		<dynamic-element name='phone' type='text' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in personens telefonnummer.]]></entry>
+				<entry name="label"><![CDATA[Telefon]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		
+		<dynamic-element name='mobile' type='text' index-type='' repeatable='false'>
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Skriv in personens mobilnummer.]]></entry>
+				<entry name="label"><![CDATA[Mobil]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+		</dynamic-element>
+		
+	</dynamic-element>
+    
+</root>

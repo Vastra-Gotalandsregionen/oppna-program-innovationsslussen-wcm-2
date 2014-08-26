@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<root>
+
+	<dynamic-element name="faqSection" type="text" index-type="" repeatable="false">
+		<meta-data>
+			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+			<entry name="required"><![CDATA[false]]></entry>
+			<entry name="instructions"><![CDATA[Enter a section title]]></entry>
+			<entry name="label"><![CDATA[FAQ Section Title]]></entry>
+			<entry name="predefinedValue"><![CDATA[]]></entry>
+		</meta-data>
+		<dynamic-element name="questions" type="text_box" index-type="" repeatable="true">
+			<meta-data>
+				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+				<entry name="required"><![CDATA[false]]></entry>
+				<entry name="instructions"><![CDATA[Enter question.]]></entry>
+				<entry name="label"><![CDATA[Question]]></entry>
+				<entry name="predefinedValue"><![CDATA[]]></entry>
+			</meta-data>
+			<dynamic-element name="answer" type="text_area" index-type="" repeatable="false">
+				<meta-data>
+					<entry name="displayAsTooltip"><![CDATA[true]]></entry>
+					<entry name="required"><![CDATA[false]]></entry>
+					<entry name="instructions"><![CDATA[Enter answer.]]></entry>
+					<entry name="label"><![CDATA[Answer]]></entry>
+					<entry name="predefinedValue"><![CDATA[]]></entry>
+				</meta-data>
+			</dynamic-element>
+		</dynamic-element>		
+	</dynamic-element>
+</root>
