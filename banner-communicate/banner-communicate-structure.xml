@@ -1,56 +1,68 @@
-<?xml version="1.0"?>
 
-<root>
-    
-	<dynamic-element name="heading" type="text" index-type="" repeatable="false">
-		<meta-data>
-			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
-			<entry name="required"><![CDATA[false]]></entry>
-			<entry name="instructions"><![CDATA[Skriv in en rubrik]]></entry>
-			<entry name="label"><![CDATA[Rubrik]]></entry>
-			<entry name="predefinedValue"><![CDATA[]]></entry>
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="" name="heading" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Rubrik]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Skriv in en rubrik]]>
+			</entry>
 		</meta-data>
 	</dynamic-element>
-    
-	<dynamic-element name="intro" type="text_box" index-type="" repeatable="false">
-		<meta-data>
-			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
-			<entry name="required"><![CDATA[false]]></entry>
-			<entry name="instructions"><![CDATA[Skriv in en introtext]]></entry>
-			<entry name="label"><![CDATA[Intro]]></entry>
-			<entry name="predefinedValue"><![CDATA[]]></entry>
+	<dynamic-element dataType="string" indexType="" name="intro" readOnly="false" repeatable="false" required="false" showLabel="true" type="textarea" width="25">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Intro]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Skriv in en introtext]]>
+			</entry>
 		</meta-data>
 	</dynamic-element>
-	
-	<dynamic-element name="content" type="text_area" index-type="" repeatable="false">
-		<meta-data>
-			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
-			<entry name="required"><![CDATA[false]]></entry>
-			<entry name="instructions"><![CDATA[Skriv in br&ouml;dtext]]></entry>
-			<entry name="label"><![CDATA[Br&ouml;dtext]]></entry>
-			<entry name="predefinedValue"><![CDATA[]]></entry>
+	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="" name="content" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="25">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Br&ouml;dtext]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Skriv in br&ouml;dtext]]>
+			</entry>
 		</meta-data>
 	</dynamic-element>
-	
-
-	<dynamic-element name="buttons" type="text" index-type="" repeatable="true">
-		<meta-data>
-			<entry name="displayAsTooltip"><![CDATA[true]]></entry>
-			<entry name="required"><![CDATA[false]]></entry>
-			<entry name="instructions"><![CDATA[Skriv in namnet p&auml; knappen]]></entry>
-			<entry name="label"><![CDATA[Namn p&aring; knapp]]></entry>
-			<entry name="predefinedValue"><![CDATA[]]></entry>
-		</meta-data>
-		<dynamic-element name="videoId" type="text" index-type="" repeatable="false">
-			<meta-data>
-				<entry name="displayAsTooltip"><![CDATA[true]]></entry>
-				<entry name="required"><![CDATA[false]]></entry>
-				<entry name="instructions"><![CDATA[Skriv in videons id hos YouTube.]]></entry>
-				<entry name="label"><![CDATA[Video-id hos YouTube]]></entry>
-				<entry name="predefinedValue"><![CDATA[]]></entry>
+	<dynamic-element dataType="string" indexType="" name="buttons" readOnly="false" repeatable="true" required="false" showLabel="true" type="text" width="25">
+		<dynamic-element dataType="string" indexType="" name="videoId" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Video-id hos YouTube]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Skriv in videons id hos YouTube.]]>
+				</entry>
 			</meta-data>
 		</dynamic-element>
-
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Namn p&aring; knapp]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Skriv in namnet p&auml; knappen]]>
+			</entry>
+		</meta-data>
 	</dynamic-element>
-	
 </root>
