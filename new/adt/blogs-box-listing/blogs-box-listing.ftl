@@ -1,6 +1,5 @@
 <#setting locale=locale>
 
-
 <#assign liferay_ui = taglibLiferayHash["/WEB-INF/tld/liferay-ui.tld"] />
 <#assign liferay_util = taglibLiferayHash["/WEB-INF/tld/liferay-util.tld"] />
 
@@ -21,7 +20,7 @@
 <#assign blogEntryFriendlyUrlPrefix = "/-/nyhetsblogg/" />
 
 
-<div class="blogs-listing content-box">
+<div class="blogs-box-listing content-box">
 
   <h2>
     Nyhetsblogg

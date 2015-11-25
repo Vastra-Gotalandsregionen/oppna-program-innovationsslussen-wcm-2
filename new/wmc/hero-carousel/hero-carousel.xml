@@ -53,46 +53,53 @@
 				</entry>
 			</meta-data>
 		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="skin" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option7088" type="option" value="default">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Default (Blå)]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option7089" type="option" value="green">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Grön]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option7090" type="option" value="red">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Röd]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option5575" type="option" value="white">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Vit]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Slide Skin]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[[""]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
 		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Sliderubrik]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[]]>
-			</entry>
-			<entry name="tip">
-				<![CDATA[]]>
-			</entry>
-		</meta-data>
-	</dynamic-element>
-	<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="skin" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
-		<dynamic-element name="option7088" type="option" value="default">
-			<meta-data locale="en_US">
-				<entry name="label">
-					<![CDATA[Default]]>
-				</entry>
-			</meta-data>
-		</dynamic-element>
-		<dynamic-element name="option7089" type="option" value="green">
-			<meta-data locale="en_US">
-				<entry name="label">
-					<![CDATA[Grön]]>
-				</entry>
-			</meta-data>
-		</dynamic-element>
-		<dynamic-element name="option7090" type="option" value="red">
-			<meta-data locale="en_US">
-				<entry name="label">
-					<![CDATA[Röd]]>
-				</entry>
-			</meta-data>
-		</dynamic-element>
-		<meta-data locale="en_US">
-			<entry name="label">
-				<![CDATA[Skin]]>
-			</entry>
-			<entry name="predefinedValue">
-				<![CDATA[[""]]]>
 			</entry>
 			<entry name="tip">
 				<![CDATA[]]>

@@ -1,38 +1,40 @@
-<#assign carouselWrapCssClass = "" />
-<#if skin.data = "default">
-	<#assign carouselWrapCssClass = "" />
-<#elseif skin.data = "green">
-	<#assign carouselWrapCssClass = "hero-carousel-wrap-green" />
-<#elseif skin.data = "red">
-	<#assign carouselWrapCssClass = "hero-carousel-wrap-red" />
+<#--
+<#assign heroCarouselWrapCssClass = "" />
+<#if slides.siblings?size gt 0>
+	<#assign firstSkin = slides.siblings[0].skin.data />
+	<#assign heroCarouselWrapCssClass = "hero-carousel-wrap-" + firstSkin />
 </#if>
+-->
 
-<div class="hero-carousel-wrap ${carouselWrapCssClass}">
+<div class="hero-carousel-wrap">
     <div class="hero-carousel-ctn">
-    	<div class="owl-carousel">
+    	<div class="hero-carousel">
 	    	<#list slides.siblings as slide>
 
-	    		<div class="slide">
+						<div class="slide">
 
-	    			<div class="image-ctn">
+							<img src="${slide.image.data}" alt="${slide.data}" />
 
-	    				<#if slide.image.data?has_content>
-	    					<img src="${slide.image.data}" alt="${slide.data}" />
-	    				</#if>
+							<#--
+		    			<div class="image-ctn">
 
-	    			</div>
+		    				<#if slide.image.data?has_content>
+		    					<img src="${slide.image.data}" alt="${slide.data}" />
+		    				</#if>
 
-	    			<div class="content-ctn">
+		    			</div>
 
-		    			<h1>${slide.data}</h1>
-		    			<p>${slide.textContent.data}</p>
-		    			<a class="link-btn link-btn-link" href="/">
-								<span>${slide.linkText.data}</span>
-							</a>
+		    			<div class="content-ctn">
 
-	    			</div>
+			    			<h1>${slide.data}</h1>
+			    			<p>${slide.textContent.data}</p>
+			    			<a class="link-btn link-btn-link" href="/">
+									<span>${slide.linkText.data}</span>
+								</a>
 
-	    		</div>
+		    			</div>
+						-->
+						</div>
 
 	    	</#list>
     	</div>
