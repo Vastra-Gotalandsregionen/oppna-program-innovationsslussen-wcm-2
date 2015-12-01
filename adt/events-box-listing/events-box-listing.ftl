@@ -76,12 +76,18 @@
 
   </div>
 
-  <#--
-  <div class="more-link-wrap">
-    <a href="${blogPageFriendlyUrl}" class="more-link">Fler blogginl&auml;gg &raquo;</a>
-  </div>
--->
-
+  <#if entries?has_content>
+    <#assign entry = entries[0] />
+    <#assign article = entry.getAssetRenderer().getArticle() />
+    <#assign displayPageUuid = article.getLayoutUuid() />
+    <#assign displayPage = layoutLocalService.fetchLayoutByUuidAndGroupId(displayPageUuid, group_id, page.isPrivateLayout())! />
+    <#if displayPage?has_content>
+      <#assign displayPageUrl = displayPage.getFriendlyURL(locale) />
+      <div class="more-link-wrap">
+        <a href="${displayPageUrl}" class="more-link">Fler event &raquo;</a>
+      </div>
+    </#if>
+  </#if>
 
 </div>
 
