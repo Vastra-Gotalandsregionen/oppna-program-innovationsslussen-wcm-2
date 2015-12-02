@@ -1,8 +1,9 @@
 <div class="simple-content-article">
 
-	#if($content.data != "")
+	<#if content.data?has_content>
 		<div class="simple-content-article-content">
 			${content.data}
 		</div>
-	#end
+	</#if>
+
 </div>

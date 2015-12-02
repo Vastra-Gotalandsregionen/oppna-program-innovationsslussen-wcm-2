@@ -1,0 +1,107 @@
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="" localizable="true" name="persons" readOnly="false" repeatable="true" required="true" showLabel="true" type="text" width="25">
+		<dynamic-element dataType="string" indexType="" localizable="true" name="nameExtra" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Namn - extra]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Skriv in extra info om personen. T.ex. ordf&ouml;rande (Innvationsr&aring;det)]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="" localizable="true" name="image" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Bild]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[V&auml;lj bild f&ouml;r personen.]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="" localizable="true" name="workTitle" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Titel / Yrkesroll]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Skriv in personens titel / yrkesroll (t.ex. Undersk&ouml;terska).]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="" localizable="true" name="workOrganization" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Enhet / Verksamhet]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Skriv in vilken enhet / verksamhet personen arbetar p&aring; (t.ex. M&auml;va 1, Uddevalla sjukhus).]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="" localizable="true" name="email" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[E-post]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Skriv in personens e-post.]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="" localizable="true" name="phone" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Telefon]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Skriv in personens telefonnummer.]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="" localizable="true" name="mobile" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Mobil]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Skriv in personens mobilnummer.]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Namn]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Skriv in personens namn.]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>
