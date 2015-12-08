@@ -7,32 +7,48 @@
 <#assign urlPrefix =  getUrlPrefix(request) />
 
 
-<div class="spot-box spot-box-${skin.data}">
+<div class="teaser-blocks">
 
-  <#if heading.data?has_content>
-    <h3>${heading.data}</h3>
-  </#if>
-  <p>${textContent.data}</p>
+  <#list teaserBlocks.siblings as block>
 
-  <#assign linkUrl = linkText.linkExternal.data />
-
-  <#if !(linkUrl?has_content)>
-    <#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(linkText.linkInternal) />
+    <#assign linkUrl = "" />
+    <#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(block.linkText.linkInternal) />
     <#if linkLayoutFriendlyUrl?has_content>
       <#assign linkUrl = urlPrefix + linkLayoutFriendlyUrl />
+    <#elseif block.linkText.linkExternal.data?has_content>
+      <#assign linkUrl = block.linkText.linkExternal.data />
     </#if>
-  </#if>
 
-
-  <#if linkUrl?has_content>
-    <div class="link-wrap">
-      <a class="link-btn link-btn-link" href="${linkUrl}">
-        <span>${linkText.data}</span>
+    <#if linkUrl?has_content>
+      <a href="${linkUrl}" class="teaser-block">
+        <@teaserContent block=block />
       </a>
-    </div>
-  </#if>
+    <#else>
+      <div class="teaser-block">
+        <@teaserContent block=block />
+      </div>
+    </#if>
+
+  </#list>
 
 </div>
+
+<#macro teaserContent block>
+  <div class="teaser-block-inner">
+    <#if block.image.data?has_content>
+      <div class="image-wrap">
+        <img src="${block.image.data}" alt="${block.data}" />
+      </div>
+    </#if>
+    <h2>
+      ${block.data}
+    </h2>
+    <div class="teaser-block-content">
+      ${block.textContent.data}
+    </div>
+  </div>
+</#macro>
+
 
 <#--
 	Macro getUrlPrefix

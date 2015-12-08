@@ -1,7 +1,20 @@
 
 <root available-locales="en_US" default-locale="en_US">
-	<dynamic-element dataType="string" indexType="" localizable="true" name="persons" readOnly="false" repeatable="true" required="true" showLabel="true" type="text" width="25">
-		<dynamic-element dataType="string" indexType="" localizable="true" name="nameExtra" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="heading" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Rubrik]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" localizable="true" name="persons" readOnly="false" repeatable="true" required="true" showLabel="true" type="text" width="large">
+		<dynamic-element dataType="string" indexType="" localizable="true" name="nameExtra" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 			<meta-data locale="en_US">
 				<entry name="label">
 					<![CDATA[Namn - extra]]>
@@ -10,7 +23,7 @@
 					<![CDATA[]]>
 				</entry>
 				<entry name="tip">
-					<![CDATA[Skriv in extra info om personen. T.ex. ordf&ouml;rande (Innvationsr&aring;det)]]>
+					<![CDATA[Skriv in extra info om personen. T.ex. ordförande (Innvationsrådet)]]>
 				</entry>
 			</meta-data>
 		</dynamic-element>
@@ -23,11 +36,11 @@
 					<![CDATA[]]>
 				</entry>
 				<entry name="tip">
-					<![CDATA[V&auml;lj bild f&ouml;r personen.]]>
+					<![CDATA[Välj bild för personen.]]>
 				</entry>
 			</meta-data>
 		</dynamic-element>
-		<dynamic-element dataType="string" indexType="" localizable="true" name="workTitle" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+		<dynamic-element dataType="string" indexType="" localizable="true" name="workTitle" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 			<meta-data locale="en_US">
 				<entry name="label">
 					<![CDATA[Titel / Yrkesroll]]>
@@ -36,11 +49,11 @@
 					<![CDATA[]]>
 				</entry>
 				<entry name="tip">
-					<![CDATA[Skriv in personens titel / yrkesroll (t.ex. Undersk&ouml;terska).]]>
+					<![CDATA[Skriv in personens titel / yrkesroll (t.ex. Undersköterska).]]>
 				</entry>
 			</meta-data>
 		</dynamic-element>
-		<dynamic-element dataType="string" indexType="" localizable="true" name="workOrganization" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+		<dynamic-element dataType="string" indexType="" localizable="true" name="workOrganization" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 			<meta-data locale="en_US">
 				<entry name="label">
 					<![CDATA[Enhet / Verksamhet]]>
@@ -49,11 +62,11 @@
 					<![CDATA[]]>
 				</entry>
 				<entry name="tip">
-					<![CDATA[Skriv in vilken enhet / verksamhet personen arbetar p&aring; (t.ex. M&auml;va 1, Uddevalla sjukhus).]]>
+					<![CDATA[Skriv in vilken enhet / verksamhet personen arbetar på (t.ex. Mäva 1, Uddevalla sjukhus).]]>
 				</entry>
 			</meta-data>
 		</dynamic-element>
-		<dynamic-element dataType="string" indexType="" localizable="true" name="email" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+		<dynamic-element dataType="string" indexType="" localizable="true" name="email" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 			<meta-data locale="en_US">
 				<entry name="label">
 					<![CDATA[E-post]]>
@@ -66,7 +79,7 @@
 				</entry>
 			</meta-data>
 		</dynamic-element>
-		<dynamic-element dataType="string" indexType="" localizable="true" name="phone" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+		<dynamic-element dataType="string" indexType="" localizable="true" name="phone" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 			<meta-data locale="en_US">
 				<entry name="label">
 					<![CDATA[Telefon]]>
@@ -79,7 +92,7 @@
 				</entry>
 			</meta-data>
 		</dynamic-element>
-		<dynamic-element dataType="string" indexType="" localizable="true" name="mobile" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+		<dynamic-element dataType="string" indexType="" localizable="true" name="mobile" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
 			<meta-data locale="en_US">
 				<entry name="label">
 					<![CDATA[Mobil]]>

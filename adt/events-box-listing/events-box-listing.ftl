@@ -30,6 +30,8 @@
 					<#assign viewURL = assetRenderer.getURLViewInContext(renderRequest, renderResponse, viewURL) />
 				</#if>
 
+        <#assign viewURL = viewURL + "?p_p_state=maximized" />
+
         <#assign docXml = saxReaderUtil.read(entry.getAssetRenderer().getArticle().getContentByLocale(locale)) />
         <#assign itemEventName = docXml.valueOf("//dynamic-element[@name='eventName']/dynamic-content/text()") />
         <#assign itemDateStart = docXml.valueOf("//dynamic-element[@name='dateStart']/dynamic-content/text()") />

@@ -11,74 +11,93 @@
 
 <#assign layoutLocalService = serviceLocator.findService("com.liferay.portal.service.LayoutLocalService")>
 
+<#assign summaryMaxChars = 300 />
+
 <div class="events-listing-wrap">
 
-  <h1>
-    Kalendarium
-  </h1>
+    <#if entries?has_content>
+      <div class="event-listing">
+        <#list entries as entry>
 
-  <div class="event-listing content-box content-box-simple">
+        <#assign assetRenderer = entry.getAssetRenderer() />
+				<#assign viewURL = assetPublisherHelper.getAssetViewURL(renderRequest, renderResponse, entry) />
 
-    <div class="content-box-bd">
+				<#if assetLinkBehavior != "showFullContent">
+					<#assign viewURL = assetRenderer.getURLViewInContext(renderRequest, renderResponse, viewURL) />
+				</#if>
 
-      <#if entries?has_content>
-        <div class="news-items">
-          <#list entries as entry>
+        <#assign viewURL = viewURL + "?p_p_state=maximized" />
 
-          <#assign assetRenderer = entry.getAssetRenderer() />
-  				<#assign viewURL = assetPublisherHelper.getAssetViewURL(renderRequest, renderResponse, entry) />
+        <#assign docXml = saxReaderUtil.read(entry.getAssetRenderer().getArticle().getContentByLocale(locale)) />
+        <#assign itemEventName = docXml.valueOf("//dynamic-element[@name='eventName']/dynamic-content/text()") />
 
-  				<#if assetLinkBehavior != "showFullContent">
-  					<#assign viewURL = assetRenderer.getURLViewInContext(renderRequest, renderResponse, viewURL) />
-  				</#if>
+        <#assign itemDateStart = docXml.valueOf("//dynamic-element[@name='dateStart']/dynamic-content/text()") />
+        <#assign itemDateEnd = docXml.valueOf("//dynamic-element[@name='dateStart']/dynamic-element[@name='dateEnd']/dynamic-content/text()") />
 
-          <#assign docXml = saxReaderUtil.read(entry.getAssetRenderer().getArticle().getContentByLocale(locale)) />
-          <#assign itemEventName = docXml.valueOf("//dynamic-element[@name='eventName']/dynamic-content/text()") />
-          <#assign itemDateStart = docXml.valueOf("//dynamic-element[@name='dateStart']/dynamic-content/text()") />
-          <#assign itemDateStartDate = itemDateStart?number?long?number_to_datetime />
-          <#assign itemTimeStart = docXml.valueOf("//dynamic-element[@name='timeStart']/dynamic-content/text()") />
+        <#assign itemTimeStart = docXml.valueOf("//dynamic-element[@name='timeStart']/dynamic-content/text()") />
+        <#assign itemTimeEnd = docXml.valueOf("//dynamic-element[@name='timeStart']/dynamic-element[@name='timeEnd']/dynamic-content/text()") />
 
-          <#assign itemTimeEnd = docXml.valueOf("//dynamic-element[@name='timeStart']/dynamic-element[@name='timeEnd']/dynamic-content/text()") />
+        <#assign itemIntro = docXml.valueOf("//dynamic-element[@name='intro']/dynamic-content/text()") />
+        <#assign itemTextContent = docXml.valueOf("//dynamic-element[@name='textContent']/dynamic-content/text()") />
 
-            <div class="entry-item">
-              <a href="${viewURL}">
+        <div class="entry-item">
 
-                <div class="entry-date">
-                  <div class="entry-date-inner">
-                    <div class="entry-date-day">
-                      ${itemDateStartDate?string("dd")}
-                    </div>
-                    <div class="entry-date-month">
-                      ${itemDateStartDate?string("MMM")}
-                    </div>
-                  </div>
-                </div>
+              <h2 class="entry-title">
+                <a href="${viewURL}">
+                  ${itemEventName}
+                </a>
+              </h2>
 
-                <div class="entry-content">
-                  <div class="name">
-                    ${itemEventName}
-                  </div>
-                  <#if itemTimeStart?has_content>
-                    <div class="time">
-                      <i class="icon-time"></i> ${itemTimeStart}
-                      <#if itemTimeEnd?has_content>
-                        &nbsp; - ${itemTimeEnd}
-                      </#if>
-                    </div>
+              <div class="meta-wrap">
+
+                <#if itemDateStart?has_content>
+                  <#assign dateString = itemDateStart?number?long?number_to_datetime?string("yyyy-MM-dd") />
+                  <#if itemDateEnd?has_content>
+                    <#assign dateString = dateString + " - " + itemDateEnd?number?long?number_to_datetime?string("yyyy-MM-dd") />
                   </#if>
+                  <div class="meta-item date">
+                    <i class="icon-calendar"></i> ${dateString}
+                  </div>
+                </#if>
 
+                <#if itemTimeStart?has_content>
+                  <#assign timeString = itemTimeStart />
+                  <#if itemTimeEnd?has_content>
+                    <#assign timeString = timeString + " - " + itemTimeEnd />
+                  </#if>
+                  <div class="meta-item time">
+                    <i class="icon-time"></i> ${timeString}
+                  </div>
+                </#if>
+
+              </div>
+
+              <div class="entry-teaser">
+
+                <#assign entrySummary = "" />
+                <#if itemIntro?has_content>
+                  <#assign entrySummary = itemIntro />
+                <#else>
+                  <#assign entrySummary = htmlUtil.escape(itemTextContent) />
+                </#if>
+
+                <#assign entrySummary = ellipsis(entrySummary summaryMaxChars) />
+
+                <div class="entry-summary">
+                  ${entrySummary}
                 </div>
+                <div class="entry-readmore">
+                  <a class="link-btn link-btn-link" href="${viewURL}">
+                    <span>L&auml;s mer</span>
+                  </a>
+                </div>
+              </div>
 
-              </a>
-            </div>
+          </div>
 
-          </#list>
-        </div>
-      </#if>
-
-    </div>
-
-  </div>
+        </#list>
+      </div>
+    </#if>
 
 </div>
 
