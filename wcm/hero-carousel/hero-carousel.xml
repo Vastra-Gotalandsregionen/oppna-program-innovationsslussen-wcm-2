@@ -66,6 +66,40 @@
 				</entry>
 			</meta-data>
 		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="infoblockPosition" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option6916" type="option" value="default">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Default (höger)]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option6917" type="option" value="left">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Vänster]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option5684" type="option" value="center">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Mitten]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Position - infoblock]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[[""]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
 		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Sliderubrik]]>

@@ -22,7 +22,7 @@
 
         <div class="content-area-wrap">
           <div class="container-fluid">
-            <div class="content-area">
+            <div class="content-area ${slide.infoblockPosition.data}">
               <h2>${slide.data}</h2>
   	    			<p>${slide.textContent.data}</p>
   	    			<a class="link-btn link-btn-link" href="${linkUrl}">
