@@ -20,7 +20,7 @@
         <#assign description = docXml.valueOf("//dynamic-element[@name='description']/dynamic-content/text()") />
 
         <#if !imageSrc?has_content>
-          <#assign imageSrc = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+          <#assign featuredImage = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
         </#if>
 
         <div class="person">
