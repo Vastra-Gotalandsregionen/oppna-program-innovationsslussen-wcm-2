@@ -1,7 +1,7 @@
 
-<root available-locales="en_US" default-locale="en_US">
+<root available-locales="sv_SE" default-locale="sv_SE">
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="firstName" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="large">
-		<meta-data locale="en_US">
+		<meta-data locale="sv_SE">
 			<entry name="label">
 				<![CDATA[Förnamn]]>
 			</entry>
@@ -14,7 +14,7 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="lastName" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="large">
-		<meta-data locale="en_US">
+		<meta-data locale="sv_SE">
 			<entry name="label">
 				<![CDATA[Efternamn]]>
 			</entry>
@@ -27,7 +27,7 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="unit" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="large">
-		<meta-data locale="en_US">
+		<meta-data locale="sv_SE">
 			<entry name="label">
 				<![CDATA[Verksamhet / Enhet]]>
 			</entry>
@@ -40,7 +40,7 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" localizable="true" name="image" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
-		<meta-data locale="en_US">
+		<meta-data locale="sv_SE">
 			<entry name="label">
 				<![CDATA[Bild]]>
 			</entry>
@@ -53,7 +53,7 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="email" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
-		<meta-data locale="en_US">
+		<meta-data locale="sv_SE">
 			<entry name="label">
 				<![CDATA[Email]]>
 			</entry>
@@ -66,9 +66,9 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="phone" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
-		<meta-data locale="en_US">
+		<meta-data locale="sv_SE">
 			<entry name="label">
-				<![CDATA[Text]]>
+				<![CDATA[Telefon]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[]]>
@@ -79,7 +79,7 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="keyword" localizable="true" name="description" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="small">
-		<meta-data locale="en_US">
+		<meta-data locale="sv_SE">
 			<entry name="label">
 				<![CDATA[Beskrivning]]>
 			</entry>
