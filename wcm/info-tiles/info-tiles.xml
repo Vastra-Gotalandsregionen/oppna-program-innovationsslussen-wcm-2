@@ -15,6 +15,19 @@
 			</meta-data>
 		</dynamic-element>
 		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="linkText" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<dynamic-element dataType="string" indexType="keyword" localizable="true" name="linkExternal" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Extern länk]]>
+					</entry>
+					<entry name="predefinedValue">
+						<![CDATA[]]>
+					</entry>
+					<entry name="tip">
+						<![CDATA[]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
 			<dynamic-element dataType="link-to-page" fieldNamespace="ddm" indexType="keyword" localizable="true" name="linkInternal" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-link-to-page" width="small">
 				<meta-data locale="en_US">
 					<entry name="label">

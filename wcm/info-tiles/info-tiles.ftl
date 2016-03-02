@@ -22,11 +22,14 @@
             <#-- Only display 3 tiles --->
             <#if tile_index lte 2>
 
-              <#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(tile.linkText.linkInternal) />
-              <#if linkLayoutFriendlyUrl?has_content>
-                <#assign linkUrl = urlPrefix + linkLayoutFriendlyUrl />
-              </#if>
+              <#assign linkUrl = tile.linkText.linkExternal.data />
 
+        			<#if linkUrl == "">
+                <#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(tile.linkText.linkInternal) />
+                <#if linkLayoutFriendlyUrl?has_content>
+                  <#assign linkUrl = urlPrefix + linkLayoutFriendlyUrl />
+                </#if>
+        			</#if>
                 <div class="tile ${columnCssClass}">
                     <h2>${tile.data}</h2>
                     <p>
