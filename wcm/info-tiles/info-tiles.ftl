@@ -6,7 +6,20 @@
 <#-- Define some variables -->
 <#assign urlPrefix =  getUrlPrefix(request) />
 
-<div class="info-tiles-wrap">
+<#assign wrapCssClass = "info-tiles-wrap" />
+
+<#assign wrapCssClass = wrapCssClass + " " + styling.skin.data />
+
+<#if styling.adjustTopPortletMargin.data == "true">
+  <#assign wrapCssClass = wrapCssClass + " adjust-top-portlet-margin" />
+</#if>
+<#if styling.adjustTopContentMargin.data == "true">
+  <#assign wrapCssClass = wrapCssClass + " adjust-top-content-margin" />
+</#if>
+
+
+<div class="${wrapCssClass}">
+
     <div class="info-tiles-ctn">
         <div class="row-fluid">
 
@@ -31,15 +44,17 @@
                 </#if>
         			</#if>
                 <div class="tile ${columnCssClass}">
-                    <h2>${tile.data}</h2>
-                    <p>
-                        ${tile.textContent.data}
-                    </p>
-                    <#if linkUrl?has_content>
-                      <a class="link-btn link-btn-link" href="${linkUrl}">
-                        <span>${tile.linkText.data}</span>
-                      </a>
-                    </#if>
+                    <div class="tile-content">
+                      <h2>${tile.data}</h2>
+                      <p>
+                          ${tile.textContent.data}
+                      </p>
+                      <#if linkUrl?has_content>
+                        <a class="link-btn link-btn-link" href="${linkUrl}">
+                          <span>${tile.linkText.data}</span>
+                        </a>
+                      </#if>
+                    </div>
                 </div>
             </#if>
         </#list>

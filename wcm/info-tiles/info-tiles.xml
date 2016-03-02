@@ -65,4 +65,80 @@
 			</entry>
 		</meta-data>
 	</dynamic-element>
+	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="styling" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-separator" width="">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="skin" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option6915" type="option" value="default">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Default (light blue)]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option6916" type="option" value="blue-heavy">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Blue Heavy]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option6198" type="option" value="green-heavy">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Green Heavy]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Select]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[[""]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="adjustTopPortletMargin" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Justera topp - portlet margin]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[false]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="boolean" indexType="keyword" localizable="true" name="adjustTopContentMargin" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Justera topp - content margin]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[false]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Styling]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
 </root>
