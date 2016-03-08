@@ -94,6 +94,13 @@
 				</entry>
 			</meta-data>
 		</dynamic-element>
+		<dynamic-element name="option5520" type="option" value="purple">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[purple]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
 		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Skin]]>

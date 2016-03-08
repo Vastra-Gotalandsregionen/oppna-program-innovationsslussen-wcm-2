@@ -88,6 +88,13 @@
 					</entry>
 				</meta-data>
 			</dynamic-element>
+			<dynamic-element name="option6228" type="option" value="purple-heavy">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Purple Heavy]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
 			<meta-data locale="en_US">
 				<entry name="label">
 					<![CDATA[Select]]>
