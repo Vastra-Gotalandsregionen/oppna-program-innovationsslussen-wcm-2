@@ -1,0 +1,90 @@
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="navItems" readOnly="false" repeatable="true" required="false" showLabel="true" type="text" width="large">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" name="linkExternal" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Extern länk]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="link-to-page" fieldNamespace="ddm" indexType="keyword" localizable="true" name="linkInternal" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-link-to-page" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Länk till sida (intern)]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="icon" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option9209" type="option" value="none">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Ingen]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option9210" type="option" value="play">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Play]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option9211" type="option" value="envelope">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Brev]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option4312" type="option" value="bulb">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Glödlampa]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option9212" type="option" value="phone">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Telefon]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Ikon]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[[""]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Länktext]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

@@ -11,7 +11,8 @@
 
 <#assign layoutLocalService = serviceLocator.findService("com.liferay.portal.service.LayoutLocalService")>
 
-<#assign summaryMaxChars = 200 />
+<#assign summaryMaxChars = 140 />
+<#assign nameMaxChars = 35 />
 
 <div class="projects-listing-wrap">
 
@@ -32,6 +33,7 @@
 
         <#assign docXml = saxReaderUtil.read(entry.getAssetRenderer().getArticle().getContentByLocale(locale)) />
         <#assign itemName = docXml.valueOf("//dynamic-element[@name='name']/dynamic-content/text()") />
+        <#assign itemNameShort = ellipsis(itemName nameMaxChars) />
 
         <#assign itemIntro = docXml.valueOf("//dynamic-element[@name='intro']/dynamic-content/text()") />
         <#assign itemIntro = ellipsis(itemIntro summaryMaxChars) />
@@ -46,14 +48,14 @@
             </div>
             <div class="entry-item-content">
               <h2>
-                ${itemName}
+                ${itemNameShort}
               </h2>
 
               <p>
                 ${itemIntro}
               </p>
 
-              <a class="link-btn link-btn-filled link-btn-link" href="${viewURL}">
+              <a class="link-btn link-btn-filled link-btn-link" href="${viewURL}" title="${itemName}">
                 <span>L&auml;s mer</span>
               </a>
             </div>
