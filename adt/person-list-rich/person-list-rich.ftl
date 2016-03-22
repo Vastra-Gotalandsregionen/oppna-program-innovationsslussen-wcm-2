@@ -14,6 +14,7 @@
         <#assign firstName = docXml.valueOf("//dynamic-element[@name='firstName']/dynamic-content/text()") />
         <#assign lastName = docXml.valueOf("//dynamic-element[@name='lastName']/dynamic-content/text()") />
         <#assign unit = docXml.valueOf("//dynamic-element[@name='unit']/dynamic-content/text()") />
+        <#assign workTitle = docXml.valueOf("//dynamic-element[@name='workTitle']/dynamic-content/text()") />
         <#assign phone = docXml.valueOf("//dynamic-element[@name='phone']/dynamic-content/text()") />
         <#assign email = docXml.valueOf("//dynamic-element[@name='email']/dynamic-content/text()") />
         <#assign imageSrc = docXml.valueOf("//dynamic-element[@name='image']/dynamic-content/text()") />
@@ -23,6 +24,11 @@
           <#assign imageSrc = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
         </#if>
 
+        <#assign personInfo = firstName + " " + lastName />
+        <#if unit?has_content>
+          <#assign personInfo = personInfo + ", " + unit />
+        </#if>
+
         <div class="person">
 
           <div class="person-image">
@@ -30,8 +36,13 @@
           </div>
           <div class="person-info">
             <h2>
-              ${firstName} ${lastName}, ${unit}
+              ${personInfo}
             </h2>
+            <#if workTitle?has_content>
+              <div class="person-worktitle">
+                ${workTitle}
+              </div>
+            </#if>
             <div class="person-description">
               ${description}
             </div>

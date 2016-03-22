@@ -1,7 +1,7 @@
 
-<root available-locales="sv_SE" default-locale="sv_SE">
+<root available-locales="en_US" default-locale="en_US">
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="firstName" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="large">
-		<meta-data locale="sv_SE">
+		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Förnamn]]>
 			</entry>
@@ -14,7 +14,7 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="lastName" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="large">
-		<meta-data locale="sv_SE">
+		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Efternamn]]>
 			</entry>
@@ -26,8 +26,8 @@
 			</entry>
 		</meta-data>
 	</dynamic-element>
-	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="unit" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="large">
-		<meta-data locale="sv_SE">
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="unit" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Verksamhet / Enhet]]>
 			</entry>
@@ -39,8 +39,21 @@
 			</entry>
 		</meta-data>
 	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="workTitle" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Titel / roll]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
 	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="keyword" localizable="true" name="image" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-documentlibrary" width="">
-		<meta-data locale="sv_SE">
+		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Bild]]>
 			</entry>
@@ -53,7 +66,7 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="email" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
-		<meta-data locale="sv_SE">
+		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Email]]>
 			</entry>
@@ -66,7 +79,7 @@
 		</meta-data>
 	</dynamic-element>
 	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="phone" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
-		<meta-data locale="sv_SE">
+		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Telefon]]>
 			</entry>
@@ -78,8 +91,8 @@
 			</entry>
 		</meta-data>
 	</dynamic-element>
-	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="keyword" localizable="true" name="description" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="small">
-		<meta-data locale="sv_SE">
+	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="keyword" localizable="true" name="description" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="large">
+		<meta-data locale="en_US">
 			<entry name="label">
 				<![CDATA[Beskrivning]]>
 			</entry>
@@ -87,6 +100,63 @@
 				<![CDATA[]]>
 			</entry>
 			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element fieldNamespace="ddm" indexType="keyword" localizable="true" name="styling" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-separator" width="">
+		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="skin" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="option6754" type="option" value="blue">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Blå]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option6755" type="option" value="green">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Grön]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option6756" type="option" value="red">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Röd]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option6757" type="option" value="purple">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Lila]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Skin]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[[""]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Styling]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+			<entry name="style">
 				<![CDATA[]]>
 			</entry>
 		</meta-data>
