@@ -11,6 +11,12 @@
   	<#list slides.siblings as slide>
 
 			<#assign linkUrl = slide.linkText.linkExternal.data />
+			<#if linkUrl?has_content>
+				<#if !(linkUrl?starts_with("http")) && !(linkUrl?starts_with("/"))>
+					<#assign linkUrl = "//" + linkUrl />
+				</#if>
+			</#if>
+
 			<#if linkUrl = "">
 				<#if slide.linkText.linkInternal.data?has_content>
 					<#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(slide.linkText.linkInternal) />

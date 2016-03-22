@@ -15,6 +15,11 @@
   <p>${textContent.data}</p>
 
   <#assign linkUrl = linkText.linkExternal.data />
+  <#if linkUrl?has_content>
+    <#if !(linkUrl?starts_with("http")) && !(linkUrl?starts_with("/"))>
+      <#assign linkUrl = "//" + linkUrl />
+    </#if>
+  </#if>
 
   <#if !(linkUrl?has_content)>
     <#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(linkText.linkInternal) />

@@ -20,6 +20,11 @@
 
         <li class="${cssClass}">
           <#assign linkUrl = navItem.linkExternal.data />
+          <#if linkUrl?has_content>
+            <#if !(linkUrl?starts_with("http")) && !(linkUrl?starts_with("/"))>
+              <#assign linkUrl = "//" + linkUrl />
+            </#if>
+          </#if>
 
           <#if linkUrl == "">
             <#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(navItem.linkInternal) />

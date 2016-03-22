@@ -36,6 +36,11 @@
             <#if tile_index lte 2>
 
               <#assign linkUrl = tile.linkText.linkExternal.data />
+              <#if linkUrl?has_content>
+                <#if !(linkUrl?starts_with("http")) && !(linkUrl?starts_with("/"))>
+                  <#assign linkUrl = "//" + linkUrl />
+                </#if>
+              </#if>
 
         			<#if linkUrl == "">
                 <#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(tile.linkText.linkInternal) />
