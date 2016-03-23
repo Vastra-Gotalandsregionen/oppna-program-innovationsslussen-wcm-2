@@ -11,8 +11,8 @@
 
 <#assign layoutLocalService = serviceLocator.findService("com.liferay.portal.service.LayoutLocalService")>
 
-<#assign summaryMaxChars = 140 />
-<#assign nameMaxChars = 35 />
+<#assign summaryMaxChars = 125 />
+<#assign nameMaxChars = 30 />
 
 <div class="projects-listing-wrap">
 

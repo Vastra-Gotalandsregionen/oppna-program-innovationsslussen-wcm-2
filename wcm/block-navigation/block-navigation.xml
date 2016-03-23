@@ -28,10 +28,10 @@
 			</meta-data>
 		</dynamic-element>
 		<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="icon" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
-			<dynamic-element name="option9209" type="option" value="none">
+			<dynamic-element name="option4349" type="option" value="default">
 				<meta-data locale="en_US">
 					<entry name="label">
-						<![CDATA[Ingen]]>
+						<![CDATA[Default]]>
 					</entry>
 				</meta-data>
 			</dynamic-element>
@@ -60,6 +60,13 @@
 				<meta-data locale="en_US">
 					<entry name="label">
 						<![CDATA[Telefon]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="option9209" type="option" value="none">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Ingen]]>
 					</entry>
 				</meta-data>
 			</dynamic-element>
