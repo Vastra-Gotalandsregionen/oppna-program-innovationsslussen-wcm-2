@@ -17,7 +17,7 @@
 <#assign blogsLayout = layoutLocalService.getLayout(blogsPagePlid) />
 
 <#assign blogPageFriendlyUrl = blogsLayout.getFriendlyURL(locale) />
-<#assign blogEntryFriendlyUrlPrefix = "/-/nyhetsblogg/" />
+<#assign blogEntryFriendlyUrlPrefix = "/-/blogs/" />
 
 
 <div class="blogs-box-listing content-box">
@@ -43,22 +43,12 @@
 
           <div class="entry-item">
             <a href="${viewURL}">
-
-              <div class="entry-date">
-                <div class="entry-date-inner">
-                  <div class="entry-date-day">
-                    ${dateUtil.getDate(entry.getPublishDate(), "dd", locale)}
-                  </div>
-                  <div class="entry-date-month">
-                    ${dateUtil.getDate(entry.getPublishDate(), "MMM", locale)}
-                  </div>
-                </div>
-              </div>
-
               <div class="entry-content">
-                ${htmlUtil.escape(entry.getTitle())}
+                ${htmlUtil.escape(entry.getTitle())} &raquo;
               </div>
-
+              <div class="entry-date">
+                ${dateUtil.getDate(entry.getPublishDate(), "dd MMM", locale)}
+              </div>
             </a>
           </div>
 

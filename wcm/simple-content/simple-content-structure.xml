@@ -1,14 +1,15 @@
+
 <root available-locales="en_US" default-locale="en_US">
 	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="" localizable="true" name="content" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="25">
 		<meta-data locale="en_US">
 			<entry name="label">
-				<![CDATA[Br&ouml;dtext]]>
+				<![CDATA[Brödtext]]>
 			</entry>
 			<entry name="predefinedValue">
 				<![CDATA[]]>
 			</entry>
 			<entry name="tip">
-				<![CDATA[Skriv in br&ouml;dtext f&ouml;r artikeln.]]>
+				<![CDATA[Skriv in brödtext för artikeln.]]>
 			</entry>
 		</meta-data>
 	</dynamic-element>
