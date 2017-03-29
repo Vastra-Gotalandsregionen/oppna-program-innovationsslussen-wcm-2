@@ -1,0 +1,56 @@
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="iframeUrl" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="large">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[iFrame-URL]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" name="iframeHeight" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[iFrame höjd]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[800px]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Skriv in vilken höjd iframen skall ha (t.ex. 800px).]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" localizable="true" multiple="false" name="skin" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="option5405" type="option" value="default">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Default]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5406" type="option" value="application">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Ansökan]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Styling / Skin]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[[""]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

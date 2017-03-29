@@ -1,0 +1,155 @@
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="" localizable="true" name="heading" readOnly="false" repeatable="false" required="true" showLabel="true" type="text" width="25">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Artikelrubrik]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Skriv in puffboxens rubrik.]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="" localizable="true" name="content" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="25">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Br&ouml;dtext]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Skriv in br&ouml;dtext f&ouml;r puffboxen.]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" localizable="true" name="link" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+		<dynamic-element dataType="link-to-page" fieldNamespace="ddm" indexType="" localizable="true" name="internalLink" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-link-to-page" width="25">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Intern L&auml;nk]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[V&auml;lj en sida till vilken l&auml;s-mer-l&auml;nken l&auml;nkar (eller skriv in en extern l&auml;nk nedan).]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="" localizable="true" name="externalLink" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Extern L&auml;nk]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Skriv in en URL till vilken l&auml;s-mer-l&auml;nken l&auml;nkar (eller v&auml;lj en intern l&auml;nk nedan).]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="string" indexType="" localizable="true" multiple="false" name="linkTarget" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+			<dynamic-element name="optionnrtg" type="option" value="none">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Normal]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<dynamic-element name="optionxita" type="option" value="_BLANK">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[New Window (_BLANK)]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Link Target]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[[]]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[V&auml;lj om l&auml;lnken skall &ouml;ppnas i samma f&ouml;nster/tabb eller i ett nytt f&ouml;nster/tabb (_BLANK)]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element dataType="boolean" indexType="" localizable="true" name="signinPrompt" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+			<dynamic-element dataType="string" indexType="" localizable="true" name="promptMsg" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Prompt-meddelande]]>
+					</entry>
+					<entry name="predefinedValue">
+						<![CDATA[]]>
+					</entry>
+					<entry name="tip">
+						<![CDATA[Skriv in den text som visas i inloggningsprompten]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Prompta inloggning]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[false]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Klicka i checkboxen om anv&auml;ndaren skall promptas om inloggning n&auml;r denne klickar p&aring; l&auml;nken (ingen r&auml;ttighetshantering - sj&auml;lva r&auml;ttighetshanteringen m&arin;ste sedan ligga p&auml; sidan l&auml;nken g&aring;r till)..]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[L&auml;nktext]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Skriv in en titel f&ouml;r l&auml;s-mer-l&auml;nken.]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="" localizable="true" multiple="false" name="skin" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="optionpmtd" type="option" value="standard">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Standard (blue)]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="optionsjrw" type="option" value="alt-2">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Alt 2 (green)]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="optioniqxf" type="option" value="alt-3">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Alt 3 (yellow)]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Boxens utseende]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[[]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[V&auml;lj utseende f&ouml;r boxen]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

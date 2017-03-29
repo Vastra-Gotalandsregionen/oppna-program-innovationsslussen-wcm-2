@@ -1,0 +1,42 @@
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="" localizable="true" name="faqSection" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="25">
+		<dynamic-element dataType="string" indexType="" localizable="true" name="questions" readOnly="false" repeatable="true" required="false" showLabel="true" type="textarea" width="25">
+			<dynamic-element dataType="html" fieldNamespace="ddm" indexType="" localizable="true" name="answer" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="25">
+				<meta-data locale="en_US">
+					<entry name="label">
+						<![CDATA[Answer]]>
+					</entry>
+					<entry name="predefinedValue">
+						<![CDATA[]]>
+					</entry>
+					<entry name="tip">
+						<![CDATA[Enter answer.]]>
+					</entry>
+				</meta-data>
+			</dynamic-element>
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Question]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[Enter question.]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[FAQ Section Title]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[Enter a section title]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>
