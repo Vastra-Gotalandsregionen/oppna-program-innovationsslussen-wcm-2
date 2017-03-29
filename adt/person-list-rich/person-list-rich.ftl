@@ -49,7 +49,7 @@
             <div class="person-contact">
               <#if email?has_content>
                 <div class="person-contact-method">
-                  <i class="icon-envelope-alt"></i> <a href="${email}">${email}</a>
+                  <i class="icon-envelope-alt"></i> <a href="mailto:${email}">${email}</a>
                 </div>
               </#if>
               <#if phone?has_content>

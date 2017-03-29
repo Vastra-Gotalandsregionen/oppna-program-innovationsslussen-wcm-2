@@ -3,6 +3,15 @@
 <#assign layoutLocalService = serviceLocator.findService("com.liferay.portal.service.LayoutLocalService") />
 <#assign layoutSetLocalService = serviceLocator.findService("com.liferay.portal.service.LayoutSetLocalService") />
 
+<#assign currentPlid = 0 />
+<#assign themeDisplay = request['theme-display']! />
+<#if themeDisplay?has_content>
+  <#assign plidStr = themeDisplay['plid']! />
+  <#if plidStr?has_content>
+      <#assign currentPlid = getterUtil.getLong(plidStr) />
+  </#if>
+</#if>
+
 <#-- Define some variables -->
 <#assign urlPrefix =  getUrlPrefix(request) />
 
@@ -12,33 +21,44 @@
     <ul>
       <#list navItems.siblings as navItem>
 
+        <#assign isCurrentPage = false />
+
         <#assign cssClass = "" />
         <#assign iconVal = navItem.icon.data />
         <#if iconVal != "none">
           <#assign cssClass = "ico" + " ico-" + iconVal />
         </#if>
 
-        <li class="${cssClass}">
-          <#assign linkUrl = navItem.linkExternal.data />
-          <#if linkUrl?has_content>
-            <#if !(linkUrl?starts_with("http")) && !(linkUrl?starts_with("/"))>
-              <#assign linkUrl = "//" + linkUrl />
+        <#assign linkUrl = navItem.linkExternal.data />
+        <#if linkUrl?has_content>
+          <#if !(linkUrl?starts_with("http")) && !(linkUrl?starts_with("/"))>
+            <#assign linkUrl = "//" + linkUrl />
+          </#if>
+        </#if>
+
+        <#if linkUrl == "">
+          <#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(navItem.linkInternal) />
+          <#if linkLayoutFriendlyUrl?has_content>
+            <#assign linkUrl = urlPrefix + linkLayoutFriendlyUrl />
+          </#if>
+          <#assign linkLayout = getLayoutFromLinkToPage(navItem.linkInternal) />
+          <#if linkLayout?has_content>
+            <#if linkLayout.getPlid() == currentPlid>
+              <#assign isCurrentPage = true />
             </#if>
           </#if>
+        </#if>
 
-          <#if linkUrl == "">
-            <#assign linkLayoutFriendlyUrl = getLayoutFriendlyUrl(navItem.linkInternal) />
-            <#if linkLayoutFriendlyUrl?has_content>
-              <#assign linkUrl = urlPrefix + linkLayoutFriendlyUrl />
-            </#if>
-          </#if>
+        <#if !isCurrentPage>
+          <li class="${cssClass}">
+            <a href="${linkUrl}">
+              <span>
+                ${navItem.data}
+              </span>
+            </a>
+          </li>
+        </#if>
 
-          <a href="${linkUrl}">
-            <span>
-              ${navItem.data}
-            </span>
-          </a>
-        </li>
       </#list>
     </ul>
   </nav>
@@ -110,5 +130,34 @@
   </#if>
 
 	<#return linkLayoutFriendlyUrl />
+
+</#function>
+
+<#--
+	Macro getLayoutFromLinkToPage
+	Parameter linkToPage = an article structure element of the type LinkToPage
+	Returns Layout
+-->
+<#function getLayoutFromLinkToPage linkToPage>
+
+  <#local linkLayout = "" />
+
+  <#if linkToPage.data?has_content>
+  	<#local linkData = linkToPage.data?split("@") />
+
+  	<#local linkLayoutId =  getterUtil.getLong(linkData[0]) />
+
+  	<#local linkLayoutIsPrivate =  false />
+  	<#if linkData[1] == "private">
+  		<#local linkLayoutIsPrivate = true />
+  	</#if>
+
+  	<#local linkLayoutGroupId = getterUtil.getLong(linkData[2]) />
+
+  	<#local linkLayout = layoutLocalService.getLayout(linkLayoutGroupId, linkLayoutIsPrivate, linkLayoutId) />
+
+  </#if>
+
+	<#return linkLayout />
 
 </#function>
