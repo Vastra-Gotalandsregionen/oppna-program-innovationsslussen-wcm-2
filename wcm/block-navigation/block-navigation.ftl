@@ -49,7 +49,12 @@
           </#if>
         </#if>
 
+        <#if isCurrentPage>
+          <#assign cssClass = cssClass + " selected">
+        </#if>
+
         <#if !isCurrentPage>
+        </#if>
           <li class="${cssClass}">
             <a href="${linkUrl}">
               <span>
@@ -57,7 +62,7 @@
               </span>
             </a>
           </li>
-        </#if>
+        
 
       </#list>
     </ul>
